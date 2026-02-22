@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Pri - InstaGroup</title>
+    <style>
+        body { background-color: #000; color: #fff; font-family: -apple-system, sans-serif; margin: 0; padding-bottom: 80px; }
+        .header { position: sticky; top: 0; background: rgba(0,0,0,0.95); padding: 12px; border-bottom: 1px solid #222; text-align: center; z-index: 10; font-size: 14px; }
+        .feed { max-width: 360px; margin: auto; padding: 10px; }
+        
+        .post { margin-bottom: 25px; border-bottom: 1px solid #111; padding-bottom: 15px; }
+        .user-bar { padding: 8px 0; display: flex; align-items: center; justify-content: space-between; font-size: 12px; font-weight: bold; }
+        
+        .category-tag { padding: 2px 6px; border-radius: 4px; font-size: 9px; text-transform: uppercase; color: #fff; }
+        .tag-hot { background: #d35400; } 
+        .tag-sexo { background: #c0392b; }
+
+        img, video { width: 100%; border-radius: 4px; display: block; margin-bottom: 5px; }
+        .description { font-size: 13px; margin-top: 8px; }
+
+        /* Grilla de 2 columnas para que entren todas las fotos */
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+        .grid img { height: 200px; object-fit: cover; }
+
+        .navbar { position: fixed; bottom: 0; width: 100%; background: #000; border-top: 1px solid #222; display: flex; justify-content: space-around; padding: 15px 0; z-index: 100; }
+        .navbar a { color: #fff; text-decoration: none; font-size: 11px; font-weight: bold; opacity: 0.5; }
+        .navbar a.active { opacity: 1; border-bottom: 2px solid #fff; }
+    </style>
+</head>
+<body>
+
+<div class="header"><strong>@pri - Galería Sucia</strong></div>
+
+<div class="feed">
+
+    <div class="post">
+        <div class="user-bar"><span>pri</span><span class="category-tag tag-hot">Desnuda</span></div>
+        <img src="tus_archivos/pri/hotputa.jpg">
+        <div class="description"><b>pri</b> Miren lo que soy... bien puta para el grupo. 😈🔥</div>
+    </div>
+
+    <div class="post">
+        <div class="user-bar"><span>pri</span><span class="category-tag tag-sexo">Sexo</span></div>
+        <img src="tus_archivos/pri/novio1.jpg">
+        <img src="tus_archivos/pri/novio2.jpg">
+        <img src="tus_archivos/pri/novio3.jpg">
+        <div class="description"><b>pri</b> Me encanta que me graben mientras me dan. 🔞</div>
+    </div>
+
+    <div class="post">
+        <div class="user-bar"><span>pri</span><span class="category-tag">Video</span></div>
+        <video controls muted loop><source src="tus_archivos/pri/vid1.mp4" type="video/mp4"></video>
+        <div class="description"><b>pri</b> Un regalito moviendo todo. 🍑💦</div>
+    </div>
+
+    <div class="user-bar"><span>Galería Hot (Todas las fotos)</span></div>
+    <div class="grid" id="foto-grid">
+        </div>
+
+</div>
+
+<div class="navbar">
+    <a href="index.html">🏠 INICIO</a>
+    <a href="rosi.html">ROSI18</a>
+    <a href="agos.html">AGOS</a>
+    <a href="pri.html" class="active">PRI</a>
+</div>
+
+<script>
+    // Lista exacta de los números de fotos que se ven en tu captura
+    const fotosPri = [1, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 44, 45];
+    
+    const grid = document.getElementById('foto-grid');
+    
+    fotosPri.forEach(num => {
+        const img = document.createElement('img');
+        img.src = `tus_archivos/pri/hot${num}.jpg`;
+        img.loading = "lazy";
+        grid.appendChild(img);
+    });
+</script>
+
+</body>
+</html>
