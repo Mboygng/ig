@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Feed Privado</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #fafafa; margin: 0; }
+        nav { background: #fff; border-bottom: 1px solid #dbdbdb; padding: 10px; text-align: center; position: sticky; top: 0; z-index: 100; }
+        .container { max-width: 600px; margin: 20px auto; padding: 0 10px; }
+        .post { background: #fff; border: 1px solid #dbdbdb; margin-bottom: 30px; border-radius: 3px; }
+        .post-header { padding: 10px; font-weight: bold; }
+        .post-content img, .post-content video { width: 100%; display: block; }
+        .post-footer { padding: 15px; }
+        .caption { margin-top: 5px; }
+        .caption span { font-weight: bold; margin-right: 5px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <h2>InstaGroup 📸</h2>
+</nav>
+
+<div class="container">
+    <div class="post">
+        <div class="post-header">Nombre de Usuario</div>
+        <div class="post-content">
+            <img src="tus_archivos/foto1.jpg" alt="Post">
+        </div>
+        <div class="post-footer">
+            <div class="caption"><span>Usuario</span> ¡Miren esta foto!</div>
+        </div>
+    </div>
+
+    <div class="post">
+        <div class="post-header">Nombre de Usuario</div>
+        <div class="post-content">
+            <video controls>
+                <source src="tus_archivos/video1.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+        </div>
+        <div class="post-footer">
+            <div class="caption"><span>Usuario</span> Un video de hoy 🎬</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
